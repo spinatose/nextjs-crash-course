@@ -1,8 +1,9 @@
 .header {
   background-color: rgb(60, 0, 128);
   height: 100px;
-  width: 90%;
-  margin: 20px auto;
+  max-width: 960px;
+  width: 100%;
+  margin: 20px auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,7 +55,11 @@
   transition: background-color 0.3s ease;
 }
 
-.navLink:hover {
+.navLink:hover, .navLink[data-active="true"] {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navLink[data-active="true"] {
   background-color: rgba(255, 255, 255, 0.2);
 }
 

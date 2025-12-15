@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Header.module.css";
+import MenuLink from "./menu-link";
 
 export default function Header() {
+  
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.logoLink}>
@@ -16,12 +20,12 @@ export default function Header() {
       </Link>
       <h1 className={styles.title}>Welcome!</h1>
       <nav className={styles.nav}>
-        <Link href="/about" className={styles.navLink}>
+        <MenuLink href="/about">
           About
-        </Link>
-        <Link href="/contacts" className={styles.navLink}>
+        </MenuLink>
+        <MenuLink href="/contacts">
           Contacts
-        </Link>
+        </MenuLink>
       </nav>
     </header>
   );
